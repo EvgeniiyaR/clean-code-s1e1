@@ -5,49 +5,49 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="body">
     <div class="matrix">
-      <img src="./eisenhower-matrix.jpg">
+      <img class="matrix__img" src="./eisenhower-matrix.jpg">
       <a class="matrix__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </div>
     <div class="todolist">
       <p>
-        <label for="new-task">Add Item</label>
+        <label class="todolist__heading todolist__heading_type_new-task" for="new-task">Add Item</label>
         <div class="todolist__add">
-          <input class="todolist__input" id="new-task" type="text">
-          <button>Add</button>
+          <input class="todolist__input todolist__input_type_add" id="new-task" type="text">
+          <button class="todolist__btn">Add</button>
         </div>
       </p>
-      <h3>Todo</h3>
+      <h3 class="todolist__heading">Todo</h3>
       <ul id="incomplete-tasks">
-        <li>
-          <input type="checkbox">
-          <label class="todolist__input">Pay Bills</label>
-          <input class="todolist__input" type="text">
-          <button class="todolist__edit">Edit</button>
-          <button class="todolist__delete">
-            <img src="./remove.svg">
+        <li class="todolist__task">
+          <input class="todolist__mark" type="checkbox">
+          <label class="todolist__label">Pay Bills</label>
+          <input class="todolist__input todolist__input_type_edit" type="text">
+          <button class="todolist__btn todolist__btn_type_edit">Edit</button>
+          <button class="todolist__btn todolist__btn_type_delete">
+            <img class="todolist__img-delete" src="./remove.svg">
           </button>
         </li>
-        <li class="todolist__edit-mode">
-          <input type="checkbox">
-          <label class="todolist__input">Go Shopping</label>
-          <input class="todolist__input" type="text" value="Go Shopping">
-          <button class="todolist__edit">Save</button>
-          <button class="todolist__delete">
-            <img src="./remove.svg">
+        <li class="todolist__task todolist__task_type_edit">
+          <input class="todolist__mark" type="checkbox">
+          <label class="todolist__label todolist__label_disabled">Go Shopping</label>
+          <input class="todolist__input todolist__input_type_edit todolist__input_type_edit_active" type="text" value="Go Shopping">
+          <button class="todolist__btn todolist__btn_type_edit">Save</button>
+          <button class="todolist__btn todolist__btn_type_delete">
+            <img class="todolist__img-delete" src="./remove.svg">
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
+      <h3 class="todolist__heading">Completed</h3>
       <ul id="completed-tasks">
-        <li>
-          <input type="checkbox" checked>
-          <label class="todolist__input">See the Doctor</label>
-          <input class="todolist__input" type="text">
-          <button class="todolist__edit">Edit</button>
-          <button class="todolist__delete">
-            <img src="./remove.svg">
+        <li class="todolist__task">
+          <input class="todolist__mark" type="checkbox" checked>
+          <label class="todolist__label todolist__label_inactive">See the Doctor</label>
+          <input class="todolist__input todolist__input_type_edit" type="text">
+          <button class="todolist__btn todolist__btn_type_edit">Edit</button>
+          <button class="todolist__btn todolist__btn_type_delete">
+            <img class="todolist__img-delete" src="./remove.svg">
           </button>
         </li>
       </ul>

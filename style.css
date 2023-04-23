@@ -50,13 +50,13 @@ input, button {
 .todolist__label {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .todolist__input {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .todolist__add {
@@ -167,7 +167,7 @@ input, button {
 
 .todolist__input_type_edit_active {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .todolist__label_disabled {

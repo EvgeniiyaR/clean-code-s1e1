@@ -1,15 +1,15 @@
 /* Basic Style */
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 
 li, h3 {
-  list-style:none;
+  list-style: none;
 }
 
 input, button {
-  outline:none;
+  outline: none;
 }
 
 .body {
@@ -143,7 +143,7 @@ input, button {
 
 .todolist__input_type_edit {
   width: 226px;
-  display:none;
+  display: none;
 }
 
 .todolist__img-delete {
@@ -166,10 +166,10 @@ input, button {
 /* Edit Task */
 
 .todolist__input_type_edit_active {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .todolist__label_disabled {
-  display:none;
+  display: none;
 }

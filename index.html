@@ -1,19 +1,57 @@
+<!DOCTYPE html>
 <html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+  <head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+  </head>
+  <body class="body">
+    <article class="matrix">
+      <img class="matrix__img" src="./eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
+      <a class="matrix__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    </article>
+    <section class="todolist" aria-label="Task list">
+      <p>
+        <label class="todolist__heading todolist__heading_type_new-task" for="new-task">Add Item</label>
+        <div class="todolist__add">
+          <input class="todolist__input todolist__input_type_add" id="new-task" type="text">
+          <button class="todolist__btn">Add</button>
+        </div>
+      </p>
+      <h3 class="todolist__heading">Todo</h3>
+      <ul id="incomplete-tasks">
+        <li class="todolist__task">
+          <input class="todolist__mark" type="checkbox">
+          <label class="todolist__label">Pay Bills</label>
+          <input class="todolist__input todolist__input_type_edit" type="text">
+          <button class="todolist__btn todolist__btn_type_edit">Edit</button>
+          <button class="todolist__btn todolist__btn_type_delete">
+            <img class="todolist__img-delete" src="./remove.svg" alt="Remove-icon">
+          </button>
+        </li>
+        <li class="todolist__task todolist__task_type_edit">
+          <input class="todolist__mark" type="checkbox">
+          <label class="todolist__label todolist__label_disabled">Go Shopping</label>
+          <input class="todolist__input todolist__input_type_edit todolist__input_type_edit_active" type="text" value="Go Shopping">
+          <button class="todolist__btn todolist__btn_type_edit">Save</button>
+          <button class="todolist__btn todolist__btn_type_delete">
+            <img class="todolist__img-delete" src="./remove.svg" alt="Remove-icon">
+          </button>
+        </li>
+      </ul>
+      <h3 class="todolist__heading">Completed</h3>
+      <ul id="completed-tasks">
+        <li class="todolist__task">
+          <input class="todolist__mark" type="checkbox" checked>
+          <label class="todolist__label todolist__label_inactive">See the Doctor</label>
+          <input class="todolist__input todolist__input_type_edit" type="text">
+          <button class="todolist__btn todolist__btn_type_edit">Edit</button>
+          <button class="todolist__btn todolist__btn_type_delete">
+            <img class="todolist__img-delete" src="./remove.svg" alt="Remove-icon">
+          </button>
+        </li>
+      </ul>
+    </section>
+    <script src="app.js"></script>
+  </body>
 </html>
